@@ -21,16 +21,26 @@ root = Tk()
 drawpad = Canvas(root, width=800,height=600, background='white')
 drawpad.grid(row=0, column=1)
 
+# Creating outline of the house and roof
 line = drawpad.create_line(400,120,300,230)
 line = drawpad.create_line(400,120,490,230)
-rectangle = drawpad.create_rectangle(300,230,490,400)
+rectangle = drawpad.create_rectangle(300,230,490,400,fill='lavender')
 
-rectangle = drawpad.create_rectangle(320,250,350,280)
-rectangle = drawpad.create_rectangle(320,340,350,370)
-rectangle = drawpad.create_rectangle(440,250,470,280)
-rectangle = drawpad.create_rectangle(440,340,470,370)
+# Creating the windows
+rectangle = drawpad.create_rectangle(320,250,350,280,fill='white')
+rectangle = drawpad.create_rectangle(320,340,350,370,fill='white')
+rectangle = drawpad.create_rectangle(440,250,470,280,fill='white')
+rectangle = drawpad.create_rectangle(440,340,470,370,fill='white')
 
+# Creating the door and the chimney
+rectangle = drawpad.create_rectangle(370,300,420,400,fill='lightblue')
+line = drawpad.create_line(360,165,360,120)
+line = drawpad.create_line(320,120,320,210)
+line = drawpad.create_line(320,120,360,120)
 
+# Creating lawn and door handle
+rectangle = drawpad.create_rectangle(400,350,410,360,fill='grey')
+rectangle = drawpad.create_rectangle(210,400,600,460,fill='lightgreen') 
 
 
 root.mainloop()
